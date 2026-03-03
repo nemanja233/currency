@@ -5,6 +5,7 @@ class Window:
         self.root = root
         self.root.title("Currency converter")
 
+
     
         self.label = ctk.CTkLabel(root, 150, 28, text="Pick your currency")
         self.label.grid(row=0, column=0) 
@@ -19,8 +20,6 @@ class Window:
         self.dropbox = ctk.CTkOptionMenu(master=root,variable=self.option_var_in, values=["Euro€", "US Dollar$"], )   # Deine Währung
         self.dropbox.grid(row=2, column=0)
         
-
-
 
 
         self.label = ctk.CTkLabel(root, 150, 28, text="In which currency?")             # In Währung
@@ -48,14 +47,14 @@ class Window:
             user_input = self.txt_in.get()
             rechnung = float(user_input) * 1.16
             str(rechnung)
-            self.textvar_out.set(f"{rechnung}$")
+            self.textvar_out.set(f"{rechnung:.2f}$")
 
 
         elif self.option_var_in.get()== "US Dollar$" and self.option_var_out.get()=="Euro€":
             user_input = self.txt_in.get()
             rechnung = float(user_input) * 0.86
             str(rechnung)
-            self.textvar_out.set(f"{rechnung}€")
+            self.textvar_out.set(f"{rechnung:.2f}€")
             
 
 
