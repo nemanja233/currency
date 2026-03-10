@@ -1,5 +1,5 @@
 import customtkinter as ctk
-
+#Währungskonverter halo
 class Window:
     def __init__(self, root):
         self.root = root
